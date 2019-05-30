@@ -11,10 +11,11 @@ x = np.array([
 
 y = np.array([88500, 86700, 87300, 88200, 170000, 83000, 100000, 170000, 105000, 83000, 56000, 65000, 56000, 63000,
               67000, 87000, 85000, 64000, 67000, 140000, 113000, 117000, 113000, 110000, 114000, 87000, 170000, 105000, 78000])
-lr.fit(x, y)
-print(lr.score(x, y))
 
+# lr.fit(x, y)
+# print(lr.score(x, y))
 x = np.append(x, np.ones([1, x.shape[1]]), axis=0)
+
 xx = np.matmul(x, x.T)
 xy = np.matmul(x, y)
 w = np.matmul(np.linalg.inv(xx), xy)
